@@ -20,7 +20,41 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="toolbar"></div>
+    <div class="toolbar">
+      <nav>
+        <div class="logo-container">
+          <img src="./img/mobile-logo.png" alt="Logo" class="d-md-none" />
+          <img src="./img/logo.svg" alt="Logo" class="d-none d-md-block" />
+        </div>
+
+        <div class="input">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            class="search"
+            type="text"
+            name="search"
+            placeholder="Prova a cercare: Lezioni di Laravel"
+          />
+        </div>
+
+        <div class="utility">
+          <ul class="utility-list">
+            <li class="utility-item d-none d-lg-block">
+              <i class="fa-solid fa-list"></i>
+            </li>
+            <li class="utility-item d-none d-lg-block">
+              <i class="fa-solid fa-circle-question"></i>
+            </li>
+            <li class="utility-item d-none d-lg-block">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </li>
+            <li class="utility-item orange">
+              <i class="fa-solid fa-bell"></i>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <main>
       <aside></aside>
       <div class="main-content"></div>

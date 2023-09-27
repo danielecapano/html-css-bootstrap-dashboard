@@ -8,6 +8,10 @@
     --white: #FFFFFF;
 }
 
+img {
+    max-width: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -19,15 +23,76 @@ main {
     display: flex;
 }
 
-.toolbar {}
+.toolbar {
+    background-color: var(--light-gray);
+    padding-block: 10px;
+}
 
 aside {
     flex-basis: 70px;
     flex-shrink: 0;
+    background-color: var(--dark-blue);
+    background-image: url(../img/sidebar-bg.png);
 }
 
 .main-content {
     flex-grow: 1;
+}
+
+/* TOOLBAR */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    padding-inline: 12px;
+}
+
+
+.logo-container {
+    width: 70px;
+}
+
+.logo-container img {
+    max-width: 50px;
+}
+
+.input {
+    position: relative;
+    flex-grow: 1;
+}
+
+.input i {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    color: var(--dark-grey);
+
+}
+
+.search {
+    width: 100%;
+    display: inline-block;
+    border: none;
+    outline: none;
+    background-color: var(--gray);
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    border-radius: 5px;
+}
+
+.utility-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.5rem;
+    margin-bottom: 0;
+    color: var(--dark-grey);
+}
+
+.utility-item.orange {
+    color: var(--orange);
 }
 
 @media (min-width: 576px) {}
@@ -36,6 +101,14 @@ aside {
 @media (min-width: 768px) {
     aside {
         flex-basis: 150px;
+    }
+
+    .logo-container {
+        width: 150px;
+    }
+
+    .logo-container img {
+        max-width: 150px;
     }
 }
 
