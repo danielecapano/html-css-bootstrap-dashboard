@@ -7,3 +7,42 @@
     --orange: #FF8F00;
     --white: #FFFFFF;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+}
+
+.toolbar {}
+
+aside {
+    flex-basis: 70px;
+    flex-shrink: 0;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+@media (min-width: 576px) {}
+
+
+@media (min-width: 768px) {
+    aside {
+        flex-basis: 150px;
+    }
+}
+
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+
+@media (min-width: 1400px) {}
