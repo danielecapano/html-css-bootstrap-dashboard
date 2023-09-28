@@ -6,6 +6,9 @@
     --dark-blue: #051E34;
     --orange: #FF8F00;
     --white: #FFFFFF;
+    --badge: #165BBA;
+
+    --button: #6C757D;
 }
 
 img {
@@ -42,6 +45,7 @@ aside {
 }
 
 .main-content {
+    overflow: auto;
     flex-grow: 1;
 }
 
@@ -142,6 +146,51 @@ nav {
     font-size: 20px;
     display: flex;
     justify-content: center;
+}
+
+.info {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.my-badge {
+    display: inline-block;
+    background-color: var(--badge);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 999px;
+    line-height: 1.8;
+    padding-inline: 12px;
+    padding-bottom: 2px;
+}
+
+.my-badge i {
+    font-size: 10px;
+}
+
+.class {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.class img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+button.grey {
+    color: var(--button);
+    border-color: currentColor;
+}
+
+table {
+    border-spacing: 20px;
+}
+
+.w-45 {
+    width: 45%;
 }
 
 @media (min-width: 576px) {}
