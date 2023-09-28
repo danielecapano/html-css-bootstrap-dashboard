@@ -21,6 +21,7 @@ body {
 main {
     flex-grow: 1;
     display: flex;
+    overflow: auto;
 }
 
 .toolbar {
@@ -29,10 +30,15 @@ main {
 }
 
 aside {
+    overflow: hidden;
     flex-basis: 70px;
     flex-shrink: 0;
     background-color: var(--dark-blue);
     background-image: url(../img/sidebar-bg.png);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-content {
@@ -95,10 +101,57 @@ nav {
     color: var(--orange);
 }
 
+/* ASIDE */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+    width: 100%;
+}
+
+.menu-item {
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-link {
+    width: 100%;
+    display: inline-block;
+    height: 40px;
+    color: currentColor;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 0 auto;
+}
+
+.setting {
+
+    color: var(--white);
+    margin-top: auto;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
 @media (min-width: 576px) {}
 
 
-@media (min-width: 768px) {
+@media (min-width: 768px) {}
+
+
+@media (min-width: 992px) {
+
     aside {
         flex-basis: 150px;
     }
@@ -110,10 +163,15 @@ nav {
     .logo-container img {
         max-width: 150px;
     }
+
+    .menu {
+        align-items: flex-start;
+    }
+
+    .setting {
+        width: 100%;
+    }
 }
-
-
-@media (min-width: 992px) {}
 
 @media (min-width: 1200px) {}
 
