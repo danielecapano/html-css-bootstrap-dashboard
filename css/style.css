@@ -45,6 +45,7 @@ aside {
 }
 
 .main-content {
+    background-color: var(--light-gray);
     overflow: auto;
     flex-grow: 1;
 }
