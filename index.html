@@ -20,6 +20,154 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- START OFFCANVAS -->
+
+    <div
+      class="offcanvas offcanvas-end w-pers"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header mb-3">
+        <h5 class="offcanvas-title fw-semibold" id="offcanvasExampleLabel">
+          Inserisci un nuovo studente
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <form method="post">
+          <div class="grid mb-3">
+            <div class="">
+              <label for="Nome" class="form-label fw-semibold">Nome</label>
+              <input type="text" class="form-control" id="Nome" name="Nome" />
+            </div>
+
+            <div class="">
+              <label for="Cognome" class="form-label fw-semibold"
+                >Cognome</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="Cognome"
+                name="Cognome"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="form-label fw-semibold">Email</label>
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">@</span>
+
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                />
+              </div>
+            </div>
+
+            <div class="">
+              <label for="password" class="form-label fw-semibold"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="Nome"
+                name="Password"
+              />
+            </div>
+
+            <div class="span">
+              <label for="address" class="form-label fw-semibold"
+                >Indirizzo</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                nome
+                address
+              />
+            </div>
+
+            <div class="">
+              <label for="city" class="form-label fw-semibold">Città</label>
+              <input type="text" class="form-control" id="city" name="city" />
+            </div>
+
+            <div class="group">
+              <div class="state">
+                <label for="state" class="form-label fw-semibold">Stato</label>
+                <select
+                  id="state"
+                  name="state"
+                  class="form-select fw-semibold"
+                  aria-label="Default select example"
+                >
+                  <option selected>Scegli...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <!-- <button class="btn btn-outline-secondary" type="button">Button</button> -->
+
+              <div>
+                <label for="cap" class="form-label fw-semibold">CAP</label>
+                <input type="text" class="form-control" id="cap" name="cap" />
+              </div>
+            </div>
+
+            <div class="span mb-2">
+              <label for="foto" class="form-label fw-semibold">Foto</label>
+              <div class="input-group custom-file-button">
+                <label class="input-group-text fw-semibold" for="inputGroupFile"
+                  >Scegli File</label
+                >
+                <input
+                  type="file"
+                  name="foto"
+                  class="form-control button-none fw-semibold"
+                  id="inputGroupFile"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label fw-semibold" for="flexCheckDefault">
+              Seleziona per proseguire
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary fw-semibold">
+            Salva
+          </button>
+          <button type="reset" class="btn btn-warning fw-semibold">
+            Svuota
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- END OFFCANVAS -->
+
+    <!-- START TOOLBAR -->
+
     <div class="toolbar">
       <nav>
         <div class="logo-container">
@@ -55,7 +203,11 @@
         </div>
       </nav>
     </div>
+
+    <!-- END TOOLBAR -->
     <main>
+      <!-- START ASIDE -->
+
       <aside>
         <ul class="menu">
           <li class="menu-item">
@@ -84,14 +236,23 @@
           >
         </div>
       </aside>
+
+      <!-- END ASIDE -->
+
       <div class="main-content">
+        <!-- START INFO -->
+
         <div class="info py-4">
           <div class="container-fluid">
             <div class="row g-2">
               <div class="col-12 col-md-4 col-lg-2 order-md-last">
                 <div class="add-student d-flex align-items-center gap-4">
                   <p class="mb-0">Nuovo Studente</p>
-                  <button class="btn btn-outline-light">
+                  <button
+                    class="btn btn-outline-light"
+                    data-bs-toggle="offcanvas"
+                    href="#offcanvasExample"
+                  >
                     <i class="fa-solid fa-plus"></i>
                   </button>
                 </div>
@@ -124,10 +285,14 @@
           </div>
         </div>
 
+        <!-- END INFO -->
+
         <div class="cards py-4">
           <div class="container-fluid">
             <div class="row">
               <div class="col-12 col-xl-8">
+                <!-- START TABLE -->
+
                 <div class="card mb-4">
                   <div class="card-header fw-semibold fs-2">
                     Prossime classi
@@ -377,6 +542,11 @@
                     </table>
                   </div>
                 </div>
+
+                <!-- END TABLE -->
+
+                <!-- START FAQ -->
+
                 <div class="card mb-4 mb-xl-0">
                   <div class="card-header fw-semibold fs-2">F.A.Q.</div>
                   <div class="card-body">
@@ -472,11 +642,14 @@
                   </div>
                 </div>
               </div>
+
               <div class="col-12 col-xl-4">
+                <!-- START TODO -->
+
                 <div class="card mb-4">
                   <div class="card-header fw-semibold fs-2">Todo</div>
                   <div class="card-body">
-                    <ul class="list-group">
+                    <ul class="list-group fw-semibold">
                       <li class="list-group-item">
                         <input
                           class="form-check-input me-1"
@@ -485,7 +658,7 @@
                           id="firstCheckbox"
                         />
                         <label class="form-check-label" for="firstCheckbox"
-                          >First checkbox</label
+                          >Kickoff nuove classi</label
                         >
                       </li>
                       <li class="list-group-item">
@@ -496,7 +669,7 @@
                           id="secondCheckbox"
                         />
                         <label class="form-check-label" for="secondCheckbox"
-                          >Second checkbox</label
+                          >Lezioni su Bootstrap 5 in classe #106</label
                         >
                       </li>
                       <li class="list-group-item">
@@ -507,12 +680,17 @@
                           id="thirdCheckbox"
                         />
                         <label class="form-check-label" for="thirdCheckbox"
-                          >Third checkbox</label
+                          >Controlla username github Studenti</label
                         >
                       </li>
                     </ul>
                   </div>
                 </div>
+
+                <!-- END TODO -->
+
+                <!-- START STATS -->
+
                 <div class="card">
                   <img
                     src="./img/stats.jpeg"
@@ -536,6 +714,8 @@
                     >
                   </div>
                 </div>
+
+                <!-- END STATS -->
               </div>
             </div>
           </div>
