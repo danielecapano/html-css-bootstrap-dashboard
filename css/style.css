@@ -140,6 +140,12 @@ nav {
     flex: 1 0 auto;
 }
 
+.icon {
+    width: 25px;
+    display: flex;
+    justify-content: center;
+}
+
 .setting {
 
     color: var(--white);
